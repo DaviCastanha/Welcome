@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100vh;
+}
+body{
+    display: grid;
+    grid-template-areas: 
+    'parallax'
+    'login';
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+}
+
+#bemvindo {
+    font-size: 50px;
+    font-family: sans-serif;
+    color: white;
+    background-clip: text;
+    text-align: center;
+}
+
+.parallax{
+    background-color: white;
+    animation: slideIn 2s forwards;
+    overflow: hidden;
+
+}
+.parallax div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-image: url('phearth.png');
+    background-repeat: repeat;
+    animation: parallax 30s infinite linear;
+    height: 90%;
+    width: 120%;
+    margin-left: -10%;
+    margin-right: -10%;
+    border-radius: 0% 0% 50% 50%/ 50%;
+
+
+}
+
+@keyframes slideIn {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+}
+
+@keyframes parallax {
+    0% {background-position: 0 0;}
+    100% {background-position: 700px 0px}
+}
+
+
+.login{
+    background-color: white;
+}
+.login div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login div#pin img{
+    width: 20%;
+    height: 20%;
+    
+}
+
+.login div button{
+    width: 80%;
+    height: 50px;
+    border-radius: 30px;
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+.login div button#signup{
+    background-color: #FF0000;
+    color: white;
+    border: none;
+    margin-top: 40px;
+}
+
+.login div #login{
+    background-color: white;
+    color: red;
+    border: solid red 2px;
+}
+
+.login p{
+    margin-top: 15px;
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align:center ;
+    font-size: 13px;
+}
+
